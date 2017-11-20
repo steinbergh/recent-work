@@ -388,7 +388,7 @@ html {
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 22px;
+  font-size: 16px;
   font-size: 1rem;
   color: black; }
 
@@ -416,6 +416,18 @@ figure {
   margin: 0 0; }
 
 p {
+  font-size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.8em; }
+
+h2 {
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 1.8em; }
+
+h2 {
+  font-size: 26px;
+  font-size: 1.625rem;
   line-height: 1.8em; }
 
 p + p, section + section {
@@ -439,6 +451,6 @@ main {
   @media only screen and (min-width: 640px) {
     main {
       width: 85%;
-      max-width: 925px; } }
+      max-width: 825px; } }
 
 /*# sourceMappingURL=dist/css/maps/style.css.map */
