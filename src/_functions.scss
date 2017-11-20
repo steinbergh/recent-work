@@ -1,0 +1,24 @@
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+
+$animStep: 100% / 27;
+//set steps for keyframe animations
+@function setStep($n) { @return $n * ($animStep); }
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// https://codepen.io/MadeByMike/pen/vNrvdZ
+@function calc-interpolation($min-screen, $min-value, $max-screen, $max-value) {
+  $a: ($max-value - $min-value) / ($max-screen - $min-screen);
+	$b: $min-value - $a * $min-screen; 
+
+	$sign: "+";
+	@if ($b < 0) {
+		$sign: "-";
+	  $b: abs($b);
+	}
+@return calc(#{$a*100}vw #{$sign} #{$b});
+}
